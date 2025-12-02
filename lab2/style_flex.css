@@ -1,0 +1,151 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 25%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-right: 20px solid white;
+    box-sizing: border-box;
+}
+
+.right-column {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #000000;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.block-1 {
+    background-color: #00437a;
+    flex-grow: 1;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.block-4 {
+    background-color: #0065b8;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.block-2 {
+    background-color: #1371be;
+    height: 120px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+    flex-shrink: 0;
+}
+
+.block-3 {
+    background-color: #ffffff;
+    flex-grow: 1;
+    justify-content: flex-start;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.block-5 {
+    background-color: #011a2f;
+    height: 100px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 50px;
+    flex-shrink: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #e3f2fd;
+    text-decoration: none;
+    color: #0d47a1;
+    border: 1px solid #64b5f6;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #1976d2;
+    color: white;
+}
+
+.element-x, .element-y {
+    background: white;
+    border: 2px solid #0d47a1;
+    padding: 10px 30px;
+}
+
+.element-x h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.element-y h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+    .left-column, .right-column {
+        width: 100%;
+        border: none;
+    }
+    .block-1, .block-3 {
+        height: auto;
+        min-height: 300px;
+    }
+}
