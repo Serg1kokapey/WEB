@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 6 - Результат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <aside class="block block-1">
+            <h3>Меню</h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Налаштування (Page 1)</a></li>
+                    <li><a href="page2.html">Перегляд (Page 2)</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <header class="block block-2">
+            <div class="element-x">
+                <h1>Результат</h1>
+            </div>
+        </header>
+
+        <main class="block block-3" style="padding: 0;">
+            <div class="glitch-wrapper">
+                <div class="glitch" id="glitchTarget" data-text="LOADING...">LOADING...</div>
+            </div>
+        </main>
+
+        <div class="block block-4">
+            <p>Оновлюється автоматично</p>
+        </div>
+
+        <footer class="block block-5">
+            <div class="element-y">
+                <h2>Круті ефекти</h2>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        
+        function updateGlitch() {
+            fetch('server.php')
+            .then(response => response.json())
+            .then(data => {
+                const element = document.getElementById('glitchTarget');
+                
+                
+                if (element.innerText !== data.text) {
+                    element.innerText = data.text;
+                    element.setAttribute('data-text', data.text);
+                }
+
+                
+                element.style.setProperty('--color1', data.color1);
+                element.style.setProperty('--color2', data.color2);
+                element.style.setProperty('--font-size', data.fontSize + 'px');
+                element.style.setProperty('--duration', data.duration + 's');
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        }
+
+        
+        updateGlitch();
+        setInterval(updateGlitch, 2000);
+    </script>
+</body>
+</html>
