@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB1 - Посилання</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <aside class="block block-1">
+            <h3>Меню</h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="page2.html">Списки </a></li>
+                    <li><a href="page3.html">Зображення</a></li>
+                    <li><a href="page4.html">Посилання</a></li>
+                    <li><a href="page5.html">Інфо</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <header class="block block-2">
+            <div class="element-x">
+                <h1>Економте світло</h1>
+            </div>
+        </header>
+
+        <main class="block block-3">
+            <h2>Інтерактивна карта</h2>
+            <p>Натисніть на ліву частину картинки, щоб повернутися на <b>Головну</b>, або на праву, щоб дізнатися <b>Інфо</b>.</p>
+            
+            <!-- Зображення-карта -->
+            <img src="./double.png" alt="Навігація" usemap="#foodmap">
+
+            <map name="foodmap">
+                <!-- Ліва половина веде на index.html -->
+                <area shape="rect" coords="0,0,300,400" href="index.html" alt="Головна">
+                <!-- Права половина веде на page5.html -->
+                <area shape="rect" coords="301,0,601,800" href="page5.html" alt="Інфо">
+            </map>
+        </main>
+
+        <div class="block block-4">
+            <p>А що тут писати?</p>
+        </div>
+
+        <footer class="block block-5">
+            <div class="element-y">
+                <h2>Любіть Україну</h2>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
