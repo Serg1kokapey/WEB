@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 { color: #333; margin-bottom: 30px; }
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 200px;
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: inherit;
+            border-top: 5px solid #ccc;
+        }
+        .card:hover { transform: translateY(-5px); }
+        
+        /* Кольори для різних технологій */
+        .float { border-top-color: #e74c3c; } 
+        .flex { border-top-color: #3498db; }  
+        .grid { border-top-color: #2ecc71; }  
+
+        h2 { font-size: 1.2rem; margin: 0; }
+        p { color: #666; font-size: 0.9rem; }
+        
+        .back-link {
+            margin-top: 40px;
+            color: #666;
+            text-decoration: none;
+        }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <h1>Варіанти верстки (Лаб №2)</h1>
+
+    <div class="container">
+        <a href="index_float.html" class="card float">
+            <h2>Float</h2>
+        </a>
+
+        <a href="index_flex.html" class="card flex">
+            <h2>Flexbox</h2>
+        </a>
+
+        <a href="index_grid.html" class="card grid">
+            <h2>CSS Grid</h2>
+        </a>
+    </div>
+
+    <a href="../index.html" class="back-link">← Назад на головну сторінку</a>
+
+</body>
+</html>
